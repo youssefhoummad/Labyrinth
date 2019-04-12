@@ -161,7 +161,7 @@ class Game:
 
 # ============== MAIN PROGRAM =============
 if __name__ == '__main__':
-    maze_map = maze_from_file('src/map.xsb')
+    maze_map = maze_from_file('src/01.map')
     screen = Screen(ROOT)
     game = Game(screen, maze_map)
     ROOT.mainloop()
