@@ -1,5 +1,6 @@
 import tkinter as tk
-from random import randint
+from random import randint, choice
+from os import listdir
 
 from src.constants import *
 from src.readmap import maze_from_file
@@ -161,7 +162,8 @@ class Game:
 
 # ============== MAIN PROGRAM =============
 if __name__ == '__main__':
-    maze_map = maze_from_file('src/01.map')
+    map = choice(listdir('src/maps'))
+    maze_map = maze_from_file('src/maps/' + map)
     screen = Screen(ROOT)
     game = Game(screen, maze_map)
     ROOT.mainloop()
