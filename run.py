@@ -158,3 +158,10 @@ class Game:
         self.game_over = False
         self.screen.erease_all()
         self.initialize()
+
+# ============== MAIN PROGRAM =============
+if __name__ == '__main__':
+    maze_map = maze_from_file('src/map.xsb')
+    screen = Screen(ROOT)
+    game = Game(screen, maze_map)
+    ROOT.mainloop()
